@@ -1,0 +1,46 @@
+.centered-input {
+  width: 350px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+  font-size: 30px; /* Large font size for prominence */
+  font-weight: 600; /* Semi-bold for a strong, modern look */
+  color: #9e80d6; /* Cool blue color */
+  text-transform: uppercase; /* Capitalizes each letter for style */
+  letter-spacing: 3px; /* Spacing between letters for a cleaner look */
+  text-align: center; /* Center the header */
+  position: relative; /* Required for pseudo-element positioning */
+  margin-bottom: 50px; /* Space below the header */
+}
+
+/* Adding a subtle gradient background effect to the text */
+h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 19.4%;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(45deg, #FF4081, #3F51B5); /* Gradient with pink and blue */
+  z-index: -1; /* Keeps the gradient in the background */
+  /* filter: blur(1px); Softens the background gradient */
+}
+
+/* Adding a subtle text shadow for a cool 3D effect */
+h2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for a lifted effect */
+}
+
+/* Optional: Adding a hover effect to change the color */
+h2:hover {
+  color: #bd961e; /* Change color to amber on hover */
+  cursor: pointer; /* Indicate interactivity */
+  transform: scale(1.05); /* Slight scale effect for interactivity */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}

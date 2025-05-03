@@ -1,0 +1,74 @@
+.centered-input {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+  
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+    font-size: 30px; /* Large font size for prominence */
+    font-weight: 600; /* Semi-bold for a strong, modern look */
+    color: #9779d1; /* Cool blue color */
+    /* text-transform: uppercase; Capitalizes each letter for style */
+    letter-spacing: 3px; /* Spacing between letters for a cleaner look */
+    text-align: center; /* Center the header */
+    position: relative; /* Required for pseudo-element positioning */
+    margin-bottom: 50px; /* Space below the header */
+  }
+  
+  /* Adding a subtle gradient background effect to the text */
+  h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 29.2%;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient(45deg, #FF4081, #3F51B5); /* Gradient with pink and blue */
+    z-index: -1; /* Keeps the gradient in the background */
+    /* filter: blur(1px); Softens the background gradient */
+  }
+  
+  /* Adding a subtle text shadow for a cool 3D effect */
+  h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for a lifted effect */
+  }
+  
+  /* Optional: Adding a hover effect to change the color */
+  h2:hover {
+    color: #bd961e; /* Change color to amber on hover */
+    cursor: pointer; /* Indicate interactivity */
+    transform: scale(1.05); /* Slight scale effect for interactivity */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+  font-size: 24px; /* Slightly larger font for prominence */
+  font-weight: 500; /* Medium weight for balance */
+  color: #3F51B5; /* Elegant blue color */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add space at the top */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+  letter-spacing: 1px; /* Slight letter spacing for readability */
+  line-height: 1.5; /* Add line height for better readability */
+  border-left: 5px solid #FF4081; /* Add a classy left border with a soft pink */
+  border-right: 5px solid #FF4081; /* Add a classy right border with a soft pink */
+  padding-left: 15px; /* Space between the text and the left border */
+  background: #f4f7fb; /* Soft background to make it stand out */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  border-radius: 8px; /* Rounded corners for a soft look */
+  padding: 15px; /* Add padding for better spacing */
+}
+
+/* Optional: Add a hover effect */
+h4:hover {
+  color: #FF4081; /* Change color on hover */
+  transform: translateY(-3px); /* Slightly lift the element */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+  

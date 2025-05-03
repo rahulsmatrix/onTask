@@ -1,0 +1,47 @@
+<br>
+<h2 class="centered-input">LOGIN</h2>
+ 
+<div class="container centered-input">
+    <form #LoginForm = "ngForm" (ngSubmit)="jwtAuthLogin()">
+
+        <div class="alert alert-warning" 
+        style="margin-top: 15px; margin-bottom: 15px;"
+        *ngIf='invalidLogin'>{{errorMessage}}</div>
+    
+        <div class="form-group">
+            <!-- <label for="email">Email :</label> -->
+            <input type="email" 
+            class="form-control"
+            style="width: 400px; margin: 0 auto; margin-bottom: 15px; display: block;" 
+            placeholder="Enter email" 
+            name="email" 
+            [(ngModel)]="user.email" required>
+        </div>
+        
+        <div class="form-group">
+            <!-- <label for="pwd">Password :</label> -->
+            <input type="password" class="form-control"
+            style="width: 400px; margin: 0 auto; margin-bottom: 15px; display: block;" 
+            placeholder="Enter password" name="pwd" [(ngModel)]="user.password" required>
+        </div>
+
+        <div>
+            <!-- <button (click)=loginUser() class="btn btn-success" [routerLink]="['/welcome', userId]">Login</button> -->
+            <!-- <button (click)=basicAuthLogin() class="btn btn-success" [routerLink]="['/welcome', userId]">Login</button> -->
+            <button type="submit" class="btn btn-success" [routerLink]="['/welcome', userId]">Login</button>
+        </div>
+
+        <div>
+            <!-- <a href="#" class="text-decoration-none">Forgot Password?</a> |  -->
+            <span class="float-end">Don't have an account? <a (click)="goToRegistration()" href="javascript:void(0)">Register</a></span>
+        </div>
+
+    </form>
+</div>
+
+<!-- <div>
+            User Name : <input type="text" name="username" [(ngModel)]="username">
+            Password  : <input type="password" name="password" [(ngModel)]="password">
+
+            <button (click)=handleLogin() class="btn btn-success float-right mr-3">Login</button>
+        </div> -->

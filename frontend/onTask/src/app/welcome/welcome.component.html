@@ -1,0 +1,22 @@
+<h2 class="centered-input">onTask</h2>
+
+    <div class="container" style="margin-top: 25px; margin-bottom: 15px;">
+        Welcome.
+        You can manage your tasks <a routerLink="/tasks">HERE</a>
+    </div>
+
+    <div class="container">
+        Click here to get a customized message : 
+        <button (click)="getWelcomeMessage()" class="btn btn-success"
+        style="margin-top: 15px; margin-bottom: 15px; display: block;"
+        >Get Message</button>
+    </div>
+
+    <div class="container" *ngIf="welcomeMessageFromService">
+        <h4>Message for you : {{welcomeMessageFromService}}</h4>
+    </div>
+
+    <div class="container" *ngIf="errorMessage">
+        <h4>Customized message for you.</h4>
+        {{errorMessage}}
+    </div>

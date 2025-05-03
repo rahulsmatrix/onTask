@@ -1,0 +1,31 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div style="margin-left: 10px;">
+            <a class="navbar-brand"
+            style="color: #896fb9;"
+            >onTask</a></div>
+
+            <ul class="navbar-nav">
+                <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" [routerLink]="['/welcome', userId]" class="nav-link">HOME</a></li>
+                <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/tasks" class="nav-link">TASKS</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a *ngIf="!basicAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">LOGIN</a></li>
+                <!-- <a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/accountdelete" class="nav-link">Delete account</a> -->
+                <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LOGOUT</a></li>
+                <button *ngIf="basicAuthenticationService.isUserLoggedIn()" class="btn btn-danger" (click)="deleteAccount()" style="float: right; background-color: transparent; color: red;">Delete account</button>
+            </ul>
+
+    </nav>
+
+    <!-- <br>
+    <div>
+        <button class="btn btn-danger" (click)="deleteAccount()" style="float: right;">Delete account</button>
+    </div> -->
+
+</header>
+
+<div class="alert alert-warning" *ngIf='unableToDelete'>{{message}}</div>
+
+<!-- <app-navbar></app-navbar> -->

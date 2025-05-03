@@ -1,0 +1,35 @@
+<h2 class="centered-input">TASK</h2>
+
+<div class="container centered-input">
+    <div class="alert alert-warning" *ngIf="taskForm.dirty && taskForm.invalid">Enter valid values</div>
+    <div class="alert alert-warning" *ngIf="taskForm.dirty && targetDate.invalid">Enter valid target date</div>
+    <div class="alert alert-warning" *ngIf="taskForm.dirty && description.invalid">Enter atleast 5 characters in description</div>
+
+    <form (ngSubmit)="!taskForm.invalid && saveTask()" #taskForm="ngForm">
+        <fieldset class="form-group">
+            <!-- <label>Description</label> -->
+            <input type="text" #description="ngModel" [(ngModel)]="task.description" 
+            class="form-control"
+            style="width: 400px; margin: 0 auto; margin-bottom: 15px; display: block;" 
+            placeholder="Enter task description" 
+            name="description" required="required" minlength="5">
+        </fieldset>
+    
+        <fieldset class="form-group">
+            <!-- [ngModel]="task.targetDate | date:'yyyy-MM-dd' "  -->
+            <!-- <label>Target Date</label> -->
+            <input type="date" #targetDate="ngModel"
+            [ngModel]="task.targetDate"
+            (ngModelChange)="task.targetDate = $event" 
+            class="form-control"
+            style="width: 400px; margin: 0 auto; margin-bottom: 15px; display: block;" 
+            placeholder="Enter target date" 
+            name="targetDate" required="required">
+        </fieldset>
+    
+        <button type="submit" class="btn btn-success">Save</button>
+        <button class="btn btn-danger" (click)="cancelUpdatingTask()" style="float: right;">Cancel</button>
+    </form>
+
+
+</div>
